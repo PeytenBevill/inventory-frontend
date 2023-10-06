@@ -1,0 +1,61 @@
+/* html, body {
+  height: 100%;
+} */
+
+
+.body {
+  background-image: linear-gradient(to bottom, #b3d1bb, #4a705a);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 16% 33%;
+}
+
+.admin {
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+  margin-bottom: 10%; 
+}
+
+.timeclock {
+  grid-column: 2/3;
+  grid-row: 1/2;
+
+  margin-bottom: 10%;
+}
+
+.inventory {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.pos {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: auto;
+  font-size: 18px;
+  padding: 10%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(208, 208, 208);
+}
+
+.button:hover {
+  background-color: white;
+}
+

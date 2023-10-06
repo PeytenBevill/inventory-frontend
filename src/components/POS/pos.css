@@ -1,0 +1,29 @@
+html, body {
+  background-color: none;
+  font-family: sans-serif;
+}
+
+.posPage {
+  display: grid;
+  grid-template-columns: .25fr 1.75fr 1fr;
+}
+
+.container1 > span {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 255, 0.652);
+  /* height: 100vh; */
+}
+
+.icon {
+  margin-top: 15%;
+}
+
+.label {
+  margin-top: 0;
+  margin-bottom: 15%;
+}
