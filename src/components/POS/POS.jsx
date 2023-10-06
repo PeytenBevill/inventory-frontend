@@ -14,7 +14,7 @@ const POS = () => {
     const inputValue = event.target.value;
     setSearchValue(inputValue);
 
-    axios.get(`https://inventory-backend-8o0pppj4a-peytenbevill.vercel.app/inventory/product/${inputValue}`)
+    axios.get(`https://inventory-backend-ifzy9nnch-peytenbevill.vercel.app/inventory/product/${inputValue}`)
       .then((response) => {
         const results = response.data;
         setSearchResults(results);
