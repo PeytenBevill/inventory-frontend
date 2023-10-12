@@ -1,10 +1,9 @@
-import {useNavigate} from "react";
+import {useNavigate, useState} from "react";
 import { Link } from "react-router-dom";
 import { Users, Clock, Package, Barcode } from "@phosphor-icons/react";
 import "./home.css";
 
 const Home = () => {
-
 
   return (
     <div className="body">

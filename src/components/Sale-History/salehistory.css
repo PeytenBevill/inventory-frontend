@@ -1,0 +1,43 @@
+.posPage2 {
+  display: grid;
+  grid-template-columns: 0.25fr 2.75fr;
+}
+
+.container1 {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 80px 80px;
+  background-color: rgba(0, 0, 255, 0.652);
+  height: 95vh;
+  text-align: center;
+}
+
+.container1 > .one {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.container1 > .two {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.icon {
+  margin-top: 15%;
+}
+
+.label {
+  margin-top: 0;
+  margin-bottom: 15%;
+}
+
+.container2 {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 0.25fr 1.5fr 0.25fr;
+}
+
+.stack {
+  grid-row: 1/2;
+}
