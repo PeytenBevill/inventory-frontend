@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(216, 216, 216);
+  background-color: #f2f2f2;
   padding: 4%;
   margin: 12% 35%;
   border-radius: 10px;
@@ -23,5 +23,7 @@
   height: 30px;
   font-size: 15px;
   border-radius: 5px;
+  background-color: #0000ffa6;
+  color: white;
   cursor: pointer;
 }

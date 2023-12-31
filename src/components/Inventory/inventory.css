@@ -1,0 +1,31 @@
+.inventory-page {
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+
+section {
+  grid-column: 1/2;
+  margin-top: 10%;
+}
+
+section > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20% auto auto 1%;
+  cursor: pointer;
+  padding: 8%;
+}
+
+section > p:hover {
+  background-color: #0000ffa6;
+  border-radius: 10px;
+  color: white;
+}
+
+main > .two {
+  grid-column: 2/3;
+  background-color: #f2f2f2;
+  height: 100vh;
+}

@@ -4,12 +4,18 @@ import axios from "axios";
 import "./posAuth.css";
 
 const POSAuth = () => {
-  const [computerID, setComputerID] = useState("");
-  const [login, setLogin] = useState(false);
+  const [computerID, setComputerID] = useState(
+    localStorage.getItem("computerID") || ""
+  );
+  const [login, setLogin] = useState(
+    localStorage.getItem("computer_num") === "true"
+  );
   const [computers, setComputers] = useState([]);
+  const [inputError, setInputError] = useState(false)
 
   const handleComputerID = (event) => {
     const inputValue = event.target.value;
+    localStorage.setItem("computerID", inputValue);
     setComputerID(inputValue);
   };
 
@@ -34,8 +40,24 @@ const POSAuth = () => {
     const id = parseInt(computerID);
 
     for (let i = 0; i < computer_nums.length; i++) {
-      if (computer_nums[i] === id) {
+      if (computer_nums[i] === id && computers[i].comp_status === 0) {
+        localStorage.setItem("computer_num", "true");
+        axios
+          .put(
+            `https://second-inventory-backend.onrender.com/computers/${id}`,
+            {
+              comp_status: 1,
+            }
+          )
+          .then((res) => {
+            res.data;
+          });
+        setInputError(false)
         setLogin(true);
+
+      } else {
+        setInputError(true)
+
       }
     }
   };
@@ -46,12 +68,11 @@ const POSAuth = () => {
     }
   };
 
-
   return (
     <>
       {login ? (
-       <POS computerID={computerID} setLogin={setLogin}/>
-      ): (
+        <POS computerID={computerID} setLogin={setLogin} />
+      ) : (
         <>
           <span className="posLogin">
             <h4>Computer ID</h4>
@@ -60,8 +81,9 @@ const POSAuth = () => {
               value={computerID}
               onChange={handleComputerID}
               onKeyDown={handleKeyPress}
+              style={{borderColor: inputError ? "red" : "" }}
             />
-            <button onClick={handleLogIn}>Log in</button>
+            <button onClick={() => handleLogIn()}>Log in</button>
           </span>
         </>
       )}

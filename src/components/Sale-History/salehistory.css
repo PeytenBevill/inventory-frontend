@@ -41,3 +41,44 @@
 .stack {
   grid-row: 1/2;
 }
+
+.spanRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-bottom: 2px solid rgb(214, 214, 214);
+}
+
+.total {
+  padding-left: 8%;
+}
+
+.date {
+  color: rgb(200, 0, 0);
+}
+
+.item-dropdown {
+  margin: 3% 30%;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+.productHistory {
+  padding-left: 8%;
+  padding: 2%;
+  background-color: rgb(232, 232, 232);
+}
+
+.qty {
+  grid-column: 2/3;
+  padding: 2%;
+  background-color: rgb(232, 232, 232);
+}
+
+.unit-cost {
+  grid-column: 3/5;
+  padding: 2%;
+  background-color: rgb(232, 232, 232);
+}

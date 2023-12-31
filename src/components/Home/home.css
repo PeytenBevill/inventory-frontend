@@ -2,11 +2,8 @@
   height: 100%;
 } */
 
-
-.body {
-  background-image: linear-gradient(to bottom, #b3d1bb, #4a705a);
-  background-repeat: no-repeat;
-  height: 100vh;
+.home-body {
+  background-color: #f2f2f2;
 }
 
 .buttons {
@@ -52,10 +49,11 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: rgb(208, 208, 208);
+  background-color: #0000ffa6;
+  color: white;
 }
 
 .button:hover {
-  background-color: white;
+  background-color: #4a4affa6;
 }
 

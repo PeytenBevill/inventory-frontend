@@ -6,7 +6,7 @@ import "./home.css";
 const Home = () => {
 
   return (
-    <div className="body">
+    <div className="home-body">
       <div className="buttons">
         <Link className="admin" style={{textDecoration: "none"}}>
         <button className="button">
@@ -20,7 +20,7 @@ const Home = () => {
           Time Clock
         </button>
         </Link>
-        <Link className="inventory" style={{textDecoration: "none"}}>
+        <Link to="/inventory" className="inventory" style={{textDecoration: "none"}}>
         <button className="inventory button">
           <Package size={42} />
           Inventory
